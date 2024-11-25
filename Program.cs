@@ -41,7 +41,7 @@ class GreenvilleIdol
             Console.WriteLine($"Revenue expected this year is ${expectedRevenue}");
 
            
-            if (contestantsThisYear >= 2 * contestantsLastYear)
+            if (contestantsThisYear > 2 * contestantsLastYear)
             {
                 Console.WriteLine("The competition is more than twice as big this year!");
             }
