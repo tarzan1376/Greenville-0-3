@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 class GreenvilleIdol
 {
@@ -19,6 +19,9 @@ class GreenvilleIdol
                 case "2":
                     Console.WriteLine("Thank you for using the Greenville Revenue App, good-bye!");
                     return;
+                default:
+                    Console.WriteLine("Invalid choice, please select 1 or 2.");
+                    break;
             }
         }
     }
@@ -40,17 +43,15 @@ class GreenvilleIdol
             decimal expectedRevenue = contestantsThisYear * ticketPrice;
             Console.WriteLine($"Revenue expected this year is ${expectedRevenue}");
 
-           
+     
             if (contestantsThisYear > 2 * contestantsLastYear)
             {
                 Console.WriteLine("The competition is more than twice as big this year!");
             }
-            
             else if (contestantsThisYear > contestantsLastYear)
             {
                 Console.WriteLine("The competition is bigger than ever!");
             }
-           
             else
             {
                 Console.WriteLine("A tighter race this year! Come out and cast your vote!");
@@ -62,7 +63,6 @@ class GreenvilleIdol
         }
     }
 
-    
     static int GetContestantInput(string prompt)
     {
         int contestants;
